@@ -3,7 +3,7 @@
     Home Page
 </x-slot:heading>
 @section('content')
-    Protection
+  
 @endsection
 
 </x-layout>

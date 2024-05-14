@@ -42,7 +42,7 @@
               <div class="ml-10 flex items-baseline space-x-4">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                 <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
-                <x-nav-link href="/about" :active="request()->is('about')">About </x-nav-link>
+                <x-nav-link href="/job" :active="request()->is('job')">Job </x-nav-link>
                 <x-nav-link href="/contact" :active="request()->is('contact')">Contact</x-nav-link>
               {{-- in blade if we use a prefix like this :active="false" this will be treated as an expression rather than a string 
               active = "false" --}}
@@ -148,7 +148,14 @@
     <main>
       <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
         <!-- Your content -->
+
+
+        
         @yield('content')
+
+
+
+
       </div>
     </main>
   </div>
