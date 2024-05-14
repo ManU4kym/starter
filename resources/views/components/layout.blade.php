@@ -41,9 +41,11 @@
             <div class="hidden md:block">
               <div class="ml-10 flex items-baseline space-x-4">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <x-nav-link href="/"  class=" home {{ request()->is('/') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }} rounded-md px-3 py-2 text-sm font-medium"> Home</x-nav-link>
-                <a href="/about" class= "{{ request()->is('about') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }} rounded-md px-3 py-2 text-sm font-medium">About</a>
-                <a href="/contact" class= "{{ request()->is('contact') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }} rounded-md px-3 py-2 text-sm font-medium">Contact</a>
+                <x-nav-link href="/">Home</x-nav-link>
+                <x-nav-link href="/about">About </x-nav-link>
+                <x-nav-link href="/contact" :active="false">Contact</x-nav-link>
+              {{-- in blade if we use a prefix like this :active="false" this will be treated as an expression rather than a string 
+              active = "false" --}}
               </div>
             </div>
           </div>
